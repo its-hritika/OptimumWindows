@@ -20,7 +20,7 @@ setlocal EnableExtensions DisableDelayedExpansion
 echo --- Disable "Hypervisor" feature
 bcdedit /set hypervisorlaunchtype off
 echo.
-Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
+PowerShell -ExecutionPolicy Unrestricted -Command Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
 :: ----------------------------------------------------------
 
 
