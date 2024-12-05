@@ -18,7 +18,7 @@ setlocal EnableExtensions DisableDelayedExpansion
 :: ----------------Disable "Hypervisor" feature-----------------
 :: ----------------------------------------------------------
 echo --- Disable "Hypervisor" feature
-bcdedit /set hypervisorlaunchtype off
+bcdedit /set hypervisorlaunchtype off # WARNING !! This Disables VBS (Virtualization Based Security) 
 echo.
 PowerShell -ExecutionPolicy Unrestricted -Command Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor
 :: ----------------------------------------------------------
